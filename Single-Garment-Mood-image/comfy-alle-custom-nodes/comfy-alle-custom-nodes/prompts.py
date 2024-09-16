@@ -1,0 +1,22 @@
+IMAGE_RELIGHT_PROMPT = {
+    "GPT_LIGHT_DIRECTION_DETECTION_PROMPT": "Act as a fashion expert. You are provided with an image. Provide "
+                                            "information in json about the light direction which is present in the "
+                                            "image,what are the potential areas or where in the image relighting "
+                                            "should be done and in which direction the light and shadows "
+                                            "should be present in the relighted image.",
+    "GPT4_PROMPT_TEST": "Your role is to act as intelligent image editor. You are provided with a image details DETAILS"
+                        ":```{image_details}```\n"
+                        "which have information about details in the image and light directions."
+                        "You are provided with the code based on which I will calculate light direction CODE_LIGHT:"
+                        "```{code_light_direction}```\n. Also code which I will be using for Image Lighting, "
+                        "LIGHT_CODE: ```{code_lighting}```\n. Lets divide your task step by step now:"
+                        "1. Understand the DETAILS about the image, take time to think and understand the light "
+                        "direction.\n"
+                        "2. Understand the CODE_LIGHT and LIGHT_CODE.\n"
+                        "3. Take time to think about what values of light_yaw , light_pitch should be set to achieve "
+                        "the light direction mentioned in the image details.\n"
+                        "4. You have to just return values of light_yaw, light_pitch (values may be negative positive "
+                        ", 0(zero )).\n"
+                        "Finally Output in a json, you can have a look on the dummy format JSON_FORMAT:"
+                        "```{json_format}```, no other extra text needed. Just fill the values."
+}

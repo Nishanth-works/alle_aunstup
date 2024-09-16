@@ -1,0 +1,13 @@
+build:
+  gpu: true
+  system_packages:
+    - "libgl1"
+    - "libglib2.0-0"
+    - "git"
+    - "g++"
+  python_version: "3.8"
+  python_requirements: requirements.txt
+  run:
+    - "python -m pip install git+https://github.com/facebookresearch/detectron2.git"
+
+predict: "predict.py:Predictor"
